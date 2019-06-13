@@ -1,0 +1,56 @@
+\documentclass[12pt, oneside]{Thesis}
+%\usepackage[english]{babel}
+\usepackage[sectionbib, square, comma, numbers, sort&compress]{natbib} 
+\hypersetup{urlcolor=black, colorlinks=true} 
+\usepackage{amsmath} 
+\usepackage{mathrsfs}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage{float}
+\usepackage[colorinlistoftodos, prependcaption, textsize=tiny]{todonotes}
+\usepackage{cleveref}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage[toc]{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+
+\setlength{\parindent}{0.5cm}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\diag}{\mathrm{diag}}
+\renewcommand{\qedsymbol}{\rule{0.5em}{0.5em}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+	\frontmatter 
+	\setstretch{1.5} 
+	\fancyhead{} 
+	\rhead{\thepage} 
+	\lhead{} 
+	\pagestyle{fancy} 
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+	\hypersetup{pdftitle={\titulo}}
+	\hypersetup{pdfauthor=\autor}
+%---------%---------%---------%---------%---------%---------%---------%------
+	\input{Portada}
+	\mainmatter 
+	\pagestyle{fancy} 
+%---------%---------%---------%---------%---------%---------%---------%------
+% CHAPTERS
+%---------%---------%---------%---------%---------%---------%---------%------
+
+  \input{Chapters/Chapter1/Chapter1}
+  \input{Chapters/Chapter1/Section1}
+%---------%---------%---------%---------%---------%---------%---------%---------
+%	BIBLIOGRAPHY
+%---------%---------%---------%---------%---------%---------%---------%---------
+	%\nocite{*}
+    \label{Bibliography}
+	\lhead{\emph{Bibliograf\'ia}}
+	\bibliographystyle{plainnat} 
+    \bibliography{bibliographybooks}  
+\end{document}

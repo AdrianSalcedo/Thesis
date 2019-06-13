@@ -1,0 +1,14 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9) (preloaded format=pdftex 2015.11.3)  5 AUG 2017 15:40
+entering extended mode
+**"C:/Users/adria/Dropbox/Tesis Maestria/tesismat.cls"
+("C:/Users/adria/Dropbox/Tesis Maestria/tesismat.cls"
+! Undefined control sequence.
+l.56 \NeedsTeXFormat
+                    {LaTeX2e}[1995/12/01]
+? 
+! Emergency stop.
+l.56 \NeedsTeXFormat
+                    {LaTeX2e}[1995/12/01]
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
