@@ -1,0 +1,17 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Yong(2015)]{Yong2015}
+Jiongmin Yong.
+\newblock \emph{Differential games}.
+\newblock World Scientific Publishing Co. Pte. Ltd., Hackensack, NJ, 2015.
+\newblock ISBN 978-981-4596-22-0.
+\newblock \doi{10.1142/9121}.
+\newblock URL \url{https://doi.org/10.1142/9121}.
+\newblock A concise introduction.
+
+\end{thebibliography}
