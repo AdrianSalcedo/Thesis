@@ -1,8 +1,9 @@
 \documentclass[12pt, oneside]{Thesis}
-%\usepackage[english]{babel}
+\usepackage[english]{babel}
 \usepackage[sectionbib, square, comma, numbers, sort&compress]{natbib} 
 \hypersetup{urlcolor=black, colorlinks=true} 
 \usepackage{amsmath} 
+\usepackage{amssymb}
 \usepackage{mathrsfs}
 \usepackage{indentfirst}
 \usepackage{enumitem}
@@ -24,7 +25,8 @@
 
 \newtheorem{definition}{Definition}
 \newtheorem{theorem}{Theorem}
-
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
 \begin{document}
 	\frontmatter 
 	\setstretch{1.5} 
@@ -45,6 +47,8 @@
 
   \input{Chapters/Chapter1/Chapter1}
   \input{Chapters/Chapter1/Section1}
+  \input{Chapters/Chapter1/Section2}
+  \input{Chapters/Chapter1/Section3}
 %---------%---------%---------%---------%---------%---------%---------%---------
 %	BIBLIOGRAPHY
 %---------%---------%---------%---------%---------%---------%---------%---------
