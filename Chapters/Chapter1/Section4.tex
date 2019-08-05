@@ -253,7 +253,7 @@ The remaining equations are manipulated similarly, with derivations and dependen
 And for adjoint variables we get:
 
 \begin{eqnarray}
--\frac{1}{2}(\phi_1(0)-\bar{\phi_1}(0))^2&-&\alpha\int_{0}^{T}(\phi_1-\bar{\phi_1})^2dt=\frac{\mu}{K}\int_{0}^{T}e^{\alpha t}(\phi_1-\bar{\phi}_1)\{[\phi_1(n+s)+\phi_2 i +\phi_3 r]\nonumber\\
+-\frac{1}{2}(\phi_1(0)-\bar{\phi_1}(0))^2&-&\alpha\int_{0}^{T}(\phi_1-\bar{\phi_1})^2dt=\frac{\mu}{K}\int_{0}^{T}e^{\alpha t}(\phi_1-\bar{\phi}_1)\{[\phi_1(n+s)+\phi_2 i +\phi_3 r]dt\nonumber\\
 &-&[\bar{\phi}_1(\bar{n}+\bar{s})+\bar{\phi}_2 \bar{i} +\bar{\phi}_3 \bar{r}]\}dt-\mu\int_{0}^{T}(\phi_1-\bar{\phi_1})^2dt \nonumber\\
 &+&\beta\int_{0}^{T}e^{\alpha t}(\phi_1-\bar{\phi}_1)\left[\frac{i(n-s)}{n^2}(\phi_1-\phi_2)-\frac{\bar{i}(\bar{n}-\bar{s})}{\bar{n}^2}(\bar{\phi}_1-\bar{\phi}_2)\right]dt \nonumber\\
 &+&\int_{0}^{T} (\phi_1-\bar{\phi}_1)[\nu(\phi_1-\phi_3)-\bar{\nu}(\bar{\phi_1}-\bar{\phi_3}))]dt. \label{eq.1.4.38}
@@ -353,5 +353,125 @@ the following bound can be shown
 \end{equation}
 
 with $C$ depends on bounds for $s,i,$ and $r$.
+
+Now, we note that a bound for $(\nu-\bar{\nu})^2$ requieres the equation [cite equation], that implies
+
+\begin{eqnarray*}
+	[s\bar{r}^m(\phi_1-\phi_3)-\bar{s}r^m(\bar{\phi_1}-\bar{\phi_3})]^2&=&[s\bar{r}^m(\phi_1-\bar{\phi_1})+(s\bar{r}^m-\bar{s}\bar{r}^m+\bar{s}\bar{r}^m-\bar{s}r^m)\bar{\phi_1}\\
+	&+&s\bar{r}^m(-\phi_3+\bar{\phi_3})+\bar{\phi_3}(\bar{s}r^m-s\bar{r}^m)]^2\\
+	&\leq&11[s^2\bar{r}^{2m}(\phi_1-\bar{\phi_1})^2+s^2\bar{r}^{2m}(\bar{\phi_3}-\phi_3)^2\\
+	&+&\bar{r}^{2m}(s-\bar{s})^2(\bar{\phi_1}^2+\bar{\phi_3}^2)+\bar{s}^2(\bar{r}-r)^2(\bar{\phi_1}^2\\
+	&+&\bar{\phi_3}^2)(m \max(r,\bar{r})^{m-1})^2].
+\end{eqnarray*}	
+	
+The expression $(\nu-\bar{\nu})^2$ can be approximated following [cite,cite] obtaining
+
+\begin{eqnarray}
+	(\nu-\bar{\nu})^2&\leq&\left(\frac{e^{2\alpha t}s(\phi_1-\phi_3)}{\frac{2B_2}{K^m}e^{m\alpha t}r^m}-\frac{e^{2\alpha t}\bar{s}(\bar{\phi_1}-\bar{\phi_3})}{\frac{2B_2}{K^m}e^{m\alpha t}\bar{r}^m}\right)^2\nonumber\\
+	&\leq& 11\left[\frac{K^me^{(2-m)\alpha t}e^{m\alpha t}}{2B_2R^m}\right]^2[s^2(\phi_1-\bar{\phi_1})^2+s^2(\bar{\phi_3}-\phi_3)^2+(s-\bar{s})^2(\bar{\phi_1}^2+\bar{\phi_3}^2)]\nonumber\\
+	&+&11m^2\left[\frac{K^me^{(2-m)\alpha t}e^{m\alpha t}e^{\alpha t}}{2B_2\min(R,\bar{R})^m\max(R,\bar{R})}\right][\bar{s}^2(\bar{r}-r)^2(\bar{\phi_1}^2+\bar{\phi_3}^2)]\nonumber\\
+	&\leq&11\left[\frac{K^me^{2\alpha t}}{2B_2}\right]^2[\max(s)^2[(\phi_1-\bar{\phi_1})^2+(\bar{\phi_3}-\phi_3)^2]+(s-\bar{s})^2\max(\phi_1,\phi_3)^2]\nonumber\\
+	&+& 11m^2\left[\frac{K^me^{3\alpha t}}{2B_2}\right]^2[\max(s)^24\max(\phi_1,\phi_3)^2(\bar{r}-r)^2]\nonumber\\
+	&\leq& Ce^{6\alpha t}[(\phi_1-\bar{\phi_1})^2+(\bar{\phi_3}-\phi_3)^2+(s-\bar{s})^2+(\bar{r}-r)^2]\label{eq.1.4.46}
+\end{eqnarray}
+
+with $C$ depends on bounds for $s,\phi_1$ and $\phi_3$ and that $R>1$ which was assumed previously in the derivation of necessary conditions.
+
+A bound on the second control depends on bounds for $\phi_2$ and $i$:
+
+\begin{eqnarray}
+(\tau-\bar{\tau})^2&\leq&\left(\frac{e^{2\alpha t}}{2B_3}[i(\phi_2-\phi_3)-\bar{i}(\bar{\phi_2}-\bar{\phi_3})]\right)^2\nonumber\\
+&\leq& Ce^{4\alpha t}[(i-\bar{i})^2+(\phi_2-\bar{\phi_2})^2+(\phi_3-\bar{\phi_3})^2+(i-\bar{i})^2].\label{eq.1.4.47}
+\end{eqnarray}
+
+The only form that remains to be considered is from equation (\ref{eq.1.4.40}):
+
+\begin{eqnarray}
+&&\frac{mB_2}{K^m}\int_{0}^{T}e^{\alpha m t}[\nu^2r^{m-1}-\bar{\nu}^2\bar{r}^{m-1}](\phi_3-\bar{\phi_3})dt\nonumber\\ &\leq& \frac{mB_2}{K^m}e^{m\alpha T}\int_{0}^{T}[\bar{\nu}^2(\bar{r}-r)\max(\bar{r},r)^{m-2}+(\bar{\nu}^2-\nu^2)r^{m-1}](\phi_3-\bar{\phi_3})dt\nonumber\\
+&\leq& Ce^{2\alpha T}\int_{0}^{T}[\bar{\nu}^2(\bar{r}-r)\max(\bar{R},R)^{m-2}+(\bar{\nu}^2-\nu^2)T^{m-1}](\phi_3-\bar{\phi_3})dt\nonumber\\
+&\leq& Ce^{2\alpha T}\int_{0}^{T}[(\bar{r}-r)^2+(\bar{\nu}^2-\nu^2)^2+(\phi_3-\bar{\phi_3})^2]dt \label{eq.1.4.48}
+\end{eqnarray}
+
+where $C$ depends on bounds for $\nu,R$ and the parameters $m,B_2,K$. The bounds (\ref{eq.1.4.41})-(\ref{eq.1.4.48}) are aplied to the sum of the equations (\ref{eq.1.4.35})-(\ref{eq.1.4.48}), with the latter three modified as described previously, deriving an inequality of the form:
+
+
+
+with the constants dependent on the parameter values and the established bounds for the state and adjoint variables. Rearranging this becomes
+
+\begin{equation}\label{eq.1.4.49}
+\frac{1}{2}[\Psi(T)+\Phi(0)]+(\alpha-\tilde{C}+\hat{C}e^{6\alpha T})\int_{0}^{T}[\Psi(t)+\Phi(t)]dt\leq 0.
+\end{equation}
+
+We now choose $\alpha$ so that 
+
+$$\alpha>\tilde{C}+\hat{C}$$
+
+and note that $\frac{\alpha-\tilde{C}}{\hat{C}}>1$. Subsequently choose $T$ so that 
+
+$$T<\frac{1}{6\alpha}\ln\left(\frac{\alpha-\tilde{C}}{\hat{C}}\right).$$
+
+Then
+
+$6\alpha T<\ln\left(\frac{\alpha-\tilde{C}}{\hat{C}}\right)$ implies $e^{6\alpha T}<\frac{\alpha-\tilde{C}}{\hat{C}}$.
+
+It follows that $\alpha-\tilde{C}+\hat{C}e^{6\alpha T}>0$, so inequality (\ref{eq.1.4.49}) can hold if and only if for every $t\in [0,T]$
+
+$$s(t)=\bar{s}(t),i(t)=\bar{i}(t),r(t)=\bar{r}(t),$$
+$$\phi_1(t)=\bar{\phi_1}(t),\phi_2(t)=\bar{\phi_2}(t),\phi_3(t)=\bar{\phi_3}(t)$$
+
+this imply
+
+$$S(t)=\bar{S}(t),I(t)=\bar{I}(t),R(t)=\bar{R}(t),$$
+$$\lambda_1(t)=\bar{\lambda_1}(t),\lambda_2(t)=\bar{\lambda_2}(t),\lambda_3(t)=\bar{\lambda_3}(t),$$
+
+establising the uniqueness of the optimal control.
 \end{proof}
+
+\begin{eqnarray*}
+\frac{1}{2}[\Psi(T)&+&\Phi(0)]+\alpha\int_{0}^{T}[\Psi(t)+\Phi(t)]dt=\mu\int_{0}^{T}(n-\bar{n})(s-\bar{s})dt\\
+&+&\beta\int_{0}^{T}\left[\frac{si}{n}-\frac{\bar{s}\bar{i}}{\bar{n}}\right](s-\bar{s})dt+\int_{0}^{T}(\nu s-\bar{\nu}\bar{s})(s-\bar{s})dt\\
+&+&\frac{\mu}{K}\int_{0}^{T} e^{\alpha t}\left[sn-\bar{s}\bar{n}\right](s-\bar{s})dt+\beta\int_{0}^{T}\left[\frac{si}{n}-\frac{\bar{s}\bar{i}}{\bar{n}}\right](i-\bar{i})dt\\
+&+&(\gamma+\delta)\int_{0}^{T}(i-\bar{i})^2dt+\int_{0}^{T}(\tau i-\bar{\tau}\bar{i})(i-\bar{i})dt+\frac{\mu}{K}\int_{0}^{T} e^{\alpha t}\left[in-\bar{i}\bar{n}\right](i-\bar{i})dt\\
+&+&\gamma\int_{0}^{T}(i-\bar{i})(r-\bar{r})dt+\int_{0}^{T}(\tau i-\bar{\tau}\bar{i})(r-\bar{r})dt+\int_{0}^{T}(\nu s-\bar{\nu}\bar{s})(r-\bar{r})dt\\
+&+&\frac{\mu}{K}\int_{0}^{T} e^{\alpha t}\left[rn-\bar{r}\bar{n}\right](r-\bar{r})dt+\frac{\mu}{K}\int_{0}^{T}e^{\alpha t}(\phi_1-\bar{\phi}_1)\{[\phi_1(n+s)+\phi_2 i +\phi_3 r]dt\\
+&+&[\bar{\phi}_1(\bar{n}+\bar{s})+\bar{\phi}_2 \bar{i} +\bar{\phi}_3 \bar{r}]\}dt+\mu\int_{0}^{T}(\phi_1-\bar{\phi_1})^2dt\\
+&+&\beta\int_{0}^{T}e^{\alpha t}(\phi_1-\bar{\phi}_1)\left[\frac{i(n-s)}{n^2}(\phi_1-\phi_2)-\frac{\bar{i}(\bar{n}-\bar{s})}{\bar{n}^2}(\bar{\phi}_1-\bar{\phi}_2)\right]dt\\
+&+&\int_{0}^{T} (\phi_1-\bar{\phi}_1)[\nu(\phi_1-\phi_3)-\bar{\nu}(\bar{\phi_1}-\bar{\phi_3}))]dt+\frac{\mu}{K}\int_{0}^{T}e^{\alpha t}(\phi_1s-\bar{\phi}_1\bar{s})(\phi_2-\bar{\phi_2})dt\\
+&+&\mu\int_{0}^{T}(\phi_1-\bar{\phi_1})(\phi_2-\bar{\phi_2})dt+\frac{\mu}{K}\int_{0}^{T}e^{\alpha t}[\phi_2(n+i)-\bar{\phi}_2(\bar{n}+\bar{i}) \nonumber\\
+&+& (\phi_3 r-\bar{\phi_3}\bar{r})](\phi_2-\bar{\phi}_2)dt+\beta\int_{0}^{T}\left[\frac{s(n-i)}{n^2}(\phi_1-\phi_2)-\frac{\bar{s}(\bar{n}-\bar{i})}{\bar{n}^2}(\bar{\phi}_1-\bar{\phi}_2)\right] \nonumber\\
+&+&(\phi_2-\bar{\phi_2})dt+\delta\int_{0}^{T}(\phi_2-\bar{\phi_2})^2dt +\gamma\int_{0}^{T}[(\phi_2-\phi_3)-(\bar{\phi}_2-\bar{\phi}_3)](\phi_2-\bar{\phi_2})dt \nonumber\\
+&+&\int_{0}^{T}[\tau(\phi_2-\phi_3)-\bar{\tau}(\bar{\phi}_2-\bar{\phi}_3)](\phi_2-\bar{\phi_2})dt\\&+&
+\frac{m B_2}{K^m}\int_{0}^{T}e^{m\alpha t}[\nu^2r^{m-1}-\bar{\nu}^2\bar{r}^{m-1}](\phi_3-\bar{\phi}_3)dt\\
+&+&\frac{\mu}{K}\int_{0}^{T}e^{\alpha t}(\phi_1 s-\bar{\phi_1}\bar{s})(\phi_3-\bar{\phi_3})dt +\mu\int_{0}^{T}(\phi_1-\bar{\phi_1})(\phi_3-\bar{\phi_3})dt\nonumber\\
+&+&\beta\int_{0}^{T}\left[\frac{s i}{n^2}(\phi_2-\phi_1)-\frac{\bar{s} \bar{i}}{\bar{n}^2}(\bar{\phi}_2-\bar{\phi}_1)\right](\phi_3-\bar{\phi_3})dt+\frac{\mu}{K}\int_{0}^{T}e^{\alpha t}\{[ \nonumber\\
+&&\phi_2 i+\phi_3(n+r)]-[\bar{\phi}_2 \bar{i}+\bar{\phi}_3(\bar{n}+\bar{r})]\}(\phi_3-\bar{\phi_3})dt. 
+\end{eqnarray*}
+
+Now we factorizing and applied the bounds and get
+
+\begin{eqnarray*}
+\frac{1}{2}[\Psi(T)&+&\Phi(0)]+\alpha\int_{0}^{T}[\Psi(t)+\Phi(t)]dt\leq \mu C\int_{0}^{T}[(\bar{n}-n)^2+(\bar{s}-s)^2]dt\\
+&+&\beta C\int_{0}^{T}\left[(\bar{i}-i)^2+\left(\frac{si}{n}-\frac{\bar{s}\bar{i}}{\bar{n}}\right)^2\right]dt+\gamma C\int_{0}^{T}[(i-\bar{i})^2+(r-\bar{r})^2]dt\\
+&+&C\int_{0}^{T}[(\tau-\bar{\tau})^2+(i-\bar{i})^2+(r-\bar{r})^2]dt+C\int_{0}^{T}[(\nu-\bar{\nu})^2+(s-\bar{s})^2+(r-\bar{r})^2]dt\\
+&+&\frac{\mu}{K}e^{\alpha T}C\int_{0}^{T}(\phi_1-\bar{\phi_1})^2dt+\beta e^{\alpha T}\int_{0}^{T}[(\phi_1-\bar{\phi_1})^2+\Psi(t)+\Phi(t)]dt\\
+&+&\int_{0}^{T}[(\phi_1-\bar{\phi_1})^2+(\nu-\bar{\nu})^2+(\phi_1-\bar{\phi_1})^2+(\phi_3-\bar{\phi_3})^2]dt\\
+&+&\frac{\mu}{K}e^{\alpha T}C\int_{0}^{T}[(\phi_1-\bar{\phi_1})^2+(s-\bar{s})^2+(\phi_2-\bar{\phi_2})^2]dt+\frac{\mu}{K}e^{\alpha T}C\int_{0}^{T}(\phi_2-\bar{\phi_2})^2dt\\
+&+& \beta C\int_{0}^{T}[\Psi(t)+\Phi(t)]dt+\delta\int_{0}^{T}(\phi_2-\bar{\phi_2})^2dt+\gamma C\int_{0}^{T}[(\phi_2-\bar{\phi_2})^2+(\phi_3-\bar{\phi_3})^2]dt\\
+&+& C\int_{0}^{T}[(\tau-\bar{\tau})^2+(\phi_2-\bar{\phi_2})^2+(\phi_3-\bar{\phi_3})^2]dt\\
+&+&Ce^{2\alpha T}\int_{0}^{T}[(r-\bar{r})^2(\bar{\nu}^2-\nu^2)^2+(\phi_3-\bar{\phi_3})^2]dt\\
+&+&\frac{\mu}{K}e^{\alpha T}C\int_{0}^{T}[(s-\bar{s})^2+(\phi_1-\bar{\phi_1})^2+(\phi_3-\bar{\phi_3})^2]dt + \frac{\mu}{K}e^{\alpha T}C\int_{0}^{T}[(\phi_3-\bar{\phi_3})^2\Psi(t)]dt\\
+&+&\beta C\int_{0}^{T}[\Psi (t)+\Phi(t)]dt.
+\end{eqnarray*}
+
+The next steps are to apply the bounds on the controls
+
+
+
+
+
+
+
+
+
+
 
