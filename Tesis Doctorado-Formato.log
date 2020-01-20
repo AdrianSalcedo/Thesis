@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.13)  13 AUG 2019 14:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.11.20)  21 NOV 2019 09:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1753,25 +1753,18 @@ Overfull \hbox (5.31432pt too wide) in alignment at lines 118--121
  [][][] []
  []
 
-[20] [21]) (./Chapters/Chapter1/Section4.tex [22] [23]
-
-LaTeX Warning: Reference `' on page 24 undefined on input line 48.
-
-
-LaTeX Warning: Reference `' on page 24 undefined on input line 48.
-
-[24] [25] [26] [27]
-Overfull \hbox (14.51677pt too wide) in paragraph at lines 161--162
-[]\OT1/cmr/m/n/12 This val-ues are not nec-es-say pos-i-tive, then we need $[] 
-[]$, $[] []$,
+[20]) (./Chapters/Chapter1/Section4.tex [21] [22] [23] [24] [25] [26] [27]
+Overfull \hbox (3.028pt too wide) in paragraph at lines 161--162
+[]\OT1/cmr/m/n/12 This value not nec-es-sar-ily pos-i-tive, then we need $[] []
+$, $[] []$,
  []
 
-[28]
+
 Overfull \hbox (11.3238pt too wide) in alignment at lines 174--179
  [][][] []
  []
 
-
+[28]
 Overfull \hbox (6.25455pt too wide) in alignment at lines 183--186
  [][][] []
  []
@@ -1796,12 +1789,12 @@ Overfull \hbox (50.98714pt too wide) in alignment at lines 262--268
  [][][] []
  []
 
-[32]
+
 Overfull \hbox (2.98224pt too wide) in alignment at lines 270--275
  [][][] []
  []
 
-[33] [34] [35] [36]
+[32] [33] [34] [35] [36]
 Overfull \hbox (4.85925pt too wide) in alignment at lines 397--408
  [][][] []
  []
@@ -1827,17 +1820,13 @@ ed.
 Package rerunfilecheck Info: File `"Tesis Doctorado-Formato".brf' has not chang
 ed.
 (rerunfilecheck)             Checksum: 85AF484B1F67397D8E8095EA9C444F21;82.
-
-
-LaTeX Warning: There were undefined references.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 34074 strings out of 492982
- 662857 string characters out of 6134896
- 701251 words of memory out of 5000000
- 37020 multiletter control sequences out of 15000+600000
+ 34076 strings out of 492982
+ 662902 string characters out of 6134895
+ 698253 words of memory out of 5000000
+ 37022 multiletter control sequences out of 15000+600000
  542827 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,56p,10397b,837s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1857,10 +1846,10 @@ cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Tesis Doctorado-Formato.pdf" (44 pages, 410101 bytes).
+Output written on "Tesis Doctorado-Formato.pdf" (44 pages, 409682 bytes).
 PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 376 compressed objects within 4 object streams
+ 447 PDF objects out of 1000 (max. 8388607)
+ 378 compressed objects within 4 object streams
  105 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

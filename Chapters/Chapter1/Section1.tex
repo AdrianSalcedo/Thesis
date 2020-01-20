@@ -91,7 +91,7 @@ for some $\bar{\varphi}(\cdot) \in C([t,T];\mathbb{R}^n)$.
 \begin{proof}
 Let define $D:=\{t_k\}_{k\geq 1}$ be a dense set of $[t,T]$. For any $k\geq 1$, the set $\{\varphi(t_1)|\varphi(\cdot)\in \mathcal{Z}\}$ is bounded. Thus, there exists aa sequence denoted by $\{\varphi_{\sigma_1(i)}(t_1)\}$ converging some point in $\mathbb{R}^n$, denoted by $\bar{\varphi}(t_1)$. Next, the set $\{\varphi_{\sigma_1(i)}(t_2)\}$ is bounded.
 
-Thus, we may let $\{\varphi_{\sigma_2(i)}(t_2)\}$ be a subsequence of $\{\varphi_{\sigma_1(i)}(t_2)\}$, which is convergent to some point in $\mathbb{R}^n$ denoted by $\bar{\varphi}(t_2)$. Continue this process, we obtain a function $\bar{\varphi}:D\rightarrow \mathbb{R}$. by letting
+Thus, we may let $\{\varphi_{\sigma_2(i)}(t_2)\}$ be a subsequence of $\{\varphi_{\sigma_1(i)}(t_2)\}$, which is convergent to some point in $\mathbb{R}^n$ denoted by $\bar{\varphi}(t_2)$. Continue this process, we obtain a function $\bar{\varphi}:D\rightarrow \mathbb{R}$. By letting
 
 $$\bar{\varphi}(\cdot)=\varphi_{\sigma_i(i)}(\cdot),\, i\geq 1.$$
 
@@ -99,7 +99,7 @@ We have
 
 $$\lim_{i\rightarrow \infty} \bar{\varphi}_i(s)=\bar{\varphi}(s)\,\mbox{for every}\, s\in D.$$
 
-By equi-continuity of the sequence $\{\varphi_k(\cdot)\}$, we see that for any $\epsilon>0$ there exits a $\delta=\delta(\epsilon)>0$, independent of $i\geq 1$ such that
+By equi-continuity of the sequence $\{\varphi_k(\cdot)\}$, we see that for any $\epsilon>0$ there exists a $\delta=\delta(\epsilon)>0$, independent of $i\geq 1$ such that
 
 \begin{equation}\label{eq1.16}
 	|\bar{\varphi}_i(s_1)-\bar{\varphi}_i(s_2)|<\epsilon\, \mbox{for every}\, s_1,s_2\in D, |s_1-s_2|<\delta.
@@ -123,7 +123,7 @@ Then for any $s\in [t,T]$, there is an $s_j\in S_{\delta}$ such that $|s-s_j|<\d
 
 $$|\bar{\varphi}_i(s)-\bar{\varphi}(s)|\leq |\bar{\varphi}_i(s)-\bar{\varphi}_i(s_j)|+|\bar{\varphi}_i(s_j)-\bar{\varphi}(s_j)|+|\bar{\varphi}(s_j)-\bar{\varphi}(s)|\leq 3\epsilon.$$
 
-This show that $\varphi_i(\cdot)$ converges to $\bar{\varphi} (\cdot)$ uniformly  in $s\in [t,T]$.
+This shows that $\varphi_i(\cdot)$ converges to $\bar{\varphi} (\cdot)$ uniformly in $s\in [t,T]$.
 \end{proof}
 
 \begin{theorem}\label{BST}[Banach-Saks]
@@ -136,7 +136,7 @@ Then there is a subsequence $\{\varphi_{k_j}(\cdot)\}$ such that
 $$\lim_{k\rightarrow \infty}||\frac{1}{N}\sum_{j=1}^{N}\varphi_{k_j}(\cdot)-\bar{\varphi}(\cdot)||_{L^2(a,b;\mathbb{R}^n)}=0.$$
 \end{theorem}
 \begin{proof}
-	Whitout loss of generality, first we consider that $\bar{\varphi}(\cdot)=0$. Let $k_1=1$. By the weak convergence of $\varphi_k(\cdot)$, we may find $k_1<k_2<\cdots <k_N$ such that
+	Without loss of generality, first we consider that $\bar{\varphi}(\cdot)=0$. Let $k_1=1$. By the weak convergence of $\varphi_k(\cdot)$, we may find $k_1<k_2<\cdots <k_N$ such that
 	
 	$$|\int_{a}^{b}\langle\varphi_{k_i}(s),\varphi_{k_j}(s)\rangle ds|<\frac{1}{N}\,\, 1\leq i<j\leq N$$
 	
@@ -173,7 +173,7 @@ $$\lim_{k\rightarrow \infty}||\frac{1}{N}\sum_{j=1}^{N}\varphi_{k_j}(\cdot)-\bar
 \end{lemma}
 
 \begin{proof}
-Define $\bar{d}(u,v)=\frac{d(u,v)}{1+d(u,v)}<1$ for every $u,v\in U$. Then with this new metric $\bar{d}$, $U$ still complet and separable. Hence without loss of generality, we assume that the original metric $d(\cdot,\cdot)$ already satisfies $d(u,v)<1$ for every $u,v \in U$.
+Define $\bar{d}(u,v)=\frac{d(u,v)}{1+d(u,v)}<1$ for every $u,v\in U$. Then with this new metric $\bar{d}$, $U$ is still complete and separable. Hence without loss of generality, we assume that the original metric $d(\cdot,\cdot)$ already satisfies $d(u,v)<1$ for every $u,v \in U$.
 
 Next, we define
 
@@ -184,7 +184,7 @@ Next, we define
 We have that $\Gamma(t)\neq \emptyset$, because $0\in g(t,U)\,\,\,a.e. \,\,t\in [0,t]$. Let $U_0:=\{v_k | k\geq 1\}$ be a countable dense subset of $U$. We claim that for any $u \in U$ and $0\leq c < 1$,
 
 \begin{equation}\label{eq1.18}
-\{t\in[0,T] |\, d(u,\Gamma(t))\leq c\}=\bigcap^{\infty}_{i=1}\bigcup^{\infty}_{j=1}\{t\in[0,T] |\, d(u,v_j)\leq c+\frac{1}{i},|g(t,v_j)|\leq \frac{1}{i}\},
+\{t\in[0,T] |\, d(u,\Gamma(t))\leq c\}=\bigcap^{\infty}_{i=1}\bigcup^{\infty}_{j=1}\left\{t\in[0,T] |\, d(u,v_j)\leq c+\frac{1}{i},|g(t,v_j)|\leq \frac{1}{i}\right\},
 \end{equation}
 
 where 
@@ -223,7 +223,7 @@ $$\left\{ \begin{array}{l}
 \end{array}
 \right.$$
 
-This prove (\ref{eq1.18}). Since the right-hand side of (\ref{eq1.18}) is measurable, so is the let-hand side. On the other hand,
+This proves (\ref{eq1.18}). Since the right-hand side of (\ref{eq1.18}) is measurable, so is the left-hand side. On the other hand,
 
 $$\left\{ \begin{array}{l}
 \{t\in[0,T] |\, d(u,\Gamma(t))\leq c\}=[0,T],\,\mbox{for every}\, c\geq 1, \\
@@ -290,7 +290,7 @@ and by $t\in D^k_i$, we have
 
 $$d(u_k(t),u_{k-1}(t))<2^{1-k}.$$
 
-This completes the construction of the sequence $\{u_k(\cdot)\}$ inductively. Clearly, (\ref{eq1.19}) holds for every $k\geq 1$. This als implies that for each $t\in[0,T]$, $\{u_k(t)\}$ is Cauchy in $U$. By completeness of $U$m we obtain 
+This completes the construction of the sequence $\{u_k(\cdot)\}$ inductively. Clearly, (\ref{eq1.19}) holds for every $k\geq 1$. This also implies that for each $t\in[0,T]$, $\{u_k(t)\}$ is Cauchy in $U$. By completeness of $U$, we obtain 
 
 $$\lim_{k\rightarrow \infty} u_k(t)=u(t),\, t\in [0,t].$$
 
@@ -342,7 +342,7 @@ This means (\ref{eq1.17}) holds.
 	
 	$$\theta(s)\leq \alpha+\int_{a}^{s}\alpha\beta(\tau)e^{\int_{\tau}^{s}\beta(r)dr}d\tau.$$
 	
-	By integration rules, if $u=\alpha,dv=\beta(\tau)e^{\int_{\tau}^{s}\beta(r)dr}d\tau$. In the other hand,
+	By integration rules, if $u=\alpha,dv=\beta(\tau)e^{\int_{\tau}^{s}\beta(r)dr}d\tau$. On the other hand,
 	
 	$$\frac{d}{d\tau}e^{\int_{\tau}^{s}\beta(r)dr}=\frac{d}{d\tau}e^{-\int_{s}^{\tau}\beta(r)dr}=-\beta(\tau) e^{-\int_{s}^{\tau} \beta(r)dr}=-\beta(\tau)e^{\int_{\tau}^{s}\beta(r)dr}$$
 	

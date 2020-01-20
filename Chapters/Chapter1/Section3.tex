@@ -2,12 +2,12 @@
 Let $T\in (0,\infty)$ be fixed. Consider the control system 
 
 $$\left\{ \begin{array}{l}
-	\dot{X}(s)=f(s,u(s),X(s)\,\,s\in [t,T], \\
+	\dot{X}(s)=f(s,u(s),X(s))\,\,s\in [t,T], \\
 	X(t)=x,\\
 \end{array}
 \right.$$
 
-with termimal state constraint
+with terminal state constraint
 
 $$X(T;t,x,u(\cdot))\in M,$$
 
@@ -23,13 +23,13 @@ $$\tilde{\mathcal{U}}^M_x[t,T]=\{u(\cdot)\in\mathcal{U}[t,T] | X(T;t,x,u(\cdot))
 
 and recall the following optimal control problem:
 
-Problem $(OC)^T$. For given $(t,x)\in \mathbb{R}_{+}\times \mathbb{R}^n$ with $\tilde{\mathcal{U}}^M_x[t,T]\neq\emptyset$, find a $\bar{u}(\cdot)\in \tilde{\mathcal{U}}^M_x[t,T]$ such that
+Problem $(OC)^T$. For a given $(t,x)\in \mathbb{R}_{+}\times \mathbb{R}^n$ with $\tilde{\mathcal{U}}^M_x[t,T]\neq\emptyset$, find a $\bar{u}(\cdot)\in \tilde{\mathcal{U}}^M_x[t,T]$ such that
 
 \begin{equation}\label{eq2.4} 
 J^T(t,x;\bar{u}(\cdot))=\inf_{u(\cdot)\in \tilde{\mathcal{U}}^M_x[t,T]} J^T(t,x;u(\cdot))\equiv V(t,x).
 \end{equation}
 
-Any $\bar{u}(\cdot)\in \tilde{\mathcal{U}}^M_x[t,T]$ satisfying (\ref{eq2.4}) is called an optimal control, the corresponding $\bar{X}(\cdot)\equiv X(\cdot;t,x,\bar{u}(\cdot))$ is called an optimal state trajectory, and $(\bar{u}(\cdot),\bar{X}(\cdot))$ is called optimal pair, we call $V(\cdot,\cdot)$ the value functional of problem $(OC)^T$.
+Any $\bar{u}(\cdot)\in \tilde{\mathcal{U}}^M_x[t,T]$ satisfying (\ref{eq2.4}) is called an optimal control. The corresponding $\bar{X}(\cdot)\equiv X(\cdot;t,x,\bar{u}(\cdot))$ is called an optimal state trajectory, and $(\bar{u}(\cdot),\bar{X}(\cdot))$ is called an optimal pair. We call $V(\cdot,\cdot)$ the value functional of problem $(OC)^T$.
 
 We introduce the following assumption for the cost functional:
 
@@ -43,19 +43,19 @@ $$\sup_{(s,u)\in \mathbb{R}_{+}\times U}|g(s,u,0)|\equiv g_0<\infty.$$
 
 %In what follows, $\omega(\cdot.\cdot)$ will stand for a generic local modulus of continuity which can be different from line to line.
 
-For any $(t,x)\in [0,T]\times\mathbb{R}^n$, let us introduce the following set
+For any $(t,x)\in [0,T]\times\mathbb{R}^n$, let us introduce the following set:
 
 $$\mathbb{E}(t,x)=\{(z^0,z)\in \mathbb{R}\times \mathbb{R}_{+}|z^0\geq g(t,u,x),z=f(t,u,x),\, u\in U\}.$$
 
-The following assumption gives some compability between the control system and the cost functional.
+The following assumption gives some compatibility between the control system and the cost functional.
 
-(C3) For almost all $t\in [0,T]$, the following Cesari property holds at any $x\in \mathbb{R}^n$,
+(C3) For almost all $t\in [0,T]$, the following Cesari property holds for any $x\in \mathbb{R}^n$,
 
 $$\bigcap_{\delta>0}\bar{co}\mathbb{E}(t,B_{\delta}(x))=\mathbb{E}(t,x),$$
 
 where, we recall that $B_{\delta}(x)$ is the open ball centered at $x$ with radius $\delta>0$, and $\bar{co}(E)$ stands for the closed convex hull of the set $E$ (the smallest closed convex set containing E).
 
-It is cleary that if $\mathbb{E}(t,x)$ has Cesari property at $x$, the $\mathbb{E}(t,x)$ is convex and closed.
+It is clear that if $\mathbb{E}(t,x)$ has Cesari property at $x$, the $\mathbb{E}(t,x)$ is convex and closed.
 
 \begin{theorem}\label{ExistsTheo}
 	Let (C1)-(C3) hold. Let $M\subseteq \mathbb{R}^n$ be a non-empty closed set. Let $(t,x)\in [0,T]\times\mathbb{R}^n$ be given and $\tilde{\mathcal{U}}^M_x[t,T]\neq \emptyset$. Then problem $(OC)^T$ admits at least one optimal pair.
@@ -88,7 +88,7 @@ Also, by (\ref{eq2.5}) and (C2), we have
 &\leq& K,\,s\in [t,T],\,k\geq 1.
 \end{eqnarray*}
 
-Hence, by exctrcting a subsequence if necessary, we may assume that
+Hence, by extracting a subsequence if necessary, we may assume that
 
 $$\left\{ \begin{array}{l}
 g(\cdot,u_k(\cdot),X_k(\cdot))\rightarrow \bar{g}(\cdot),\,\mbox{weakly in}\, L^2([t,T];\mathbb{R}^n), \\
@@ -126,7 +126,7 @@ $$\begin{pmatrix}
 	g(s,u_i(s),X_i(s)) \\ f(s,u_i(s),X_i(s))
 \end{pmatrix} \in \mathbb{E}(s,X_i(s)),\,i\geq 1,\, s\in [t,T].$$
 
-Hence, for any $\delta>0$, there exits a $K_{\delta}>0$ such that 
+Hence, for any $\delta>0$, there exists a $K_{\delta}>0$ such that 
 
 \begin{equation}\label{eq2.7}
 	\begin{pmatrix}
@@ -134,7 +134,7 @@ Hence, for any $\delta>0$, there exits a $K_{\delta}>0$ such that
 	\end{pmatrix}\in \bar{co}\mathbb{E}(s,B_{\delta}(\bar{X}(s))),\, K\geq K_{\delta},\, s\in[t,T].
 \end{equation}
 
-Combinig (\ref{eq2.6}) and (\ref{eq2.7}), using (C3), we obtain
+Combining (\ref{eq2.6}) and (\ref{eq2.7}), using (C3), we obtain
 
 \begin{equation*}
 \begin{pmatrix}
@@ -144,26 +144,22 @@ Combinig (\ref{eq2.6}) and (\ref{eq2.7}), using (C3), we obtain
 \end{pmatrix}\in \bigcap_{\delta>0}\bar{co}\mathbb{E}(s,B_{\delta}(\bar{X}(s)))=\mathbb{E}(s,\bar{X}(s)).
 \end{equation*}
 
-Then by Filippov's Lemma (\ref{FL}), there exits a $\bar{u}(\cdot)\in \mathcal{U}[t,T]$ such that
+Then by Filippov's Lemma (\ref{FL}), there exists a $\bar{u}(\cdot)\in \mathcal{U}[t,T]$ such that
 
 $$\bar{g}(s)\geq g(s,\bar{u}(s),\bar{X}(s)),\,\bar{f}(s)=f(s,\bar{u}(s),\bar{X}(s)),\, s\in [t,T].$$
 
 This means $\bar{X}(\cdot)=X(\cdot;t,x,\bar{u})$. On the other hand, since
 
 $$\bar{X}_k(T)\equiv X(T;t,x,\bar{u}_k(\cdot))\in M,\, k\geq 1$$
-
 one has 
-
 $$\bar{X}(T)\equiv X(T;t,x,\bar{u}(\cdot))\in M,$$
 
-which means that $\bar{u}(\cdot)\in \tilde{\mathcal{U}}^M_x[t,T]$. finally, by Fatou's Lemma
-
+which means that $\bar{u}(\cdot)\in \tilde{\mathcal{U}}^M_x[t,T]$. Finally, by Fatou's Lemma
 \begin{eqnarray*}
 J^T(t,x;\bar{u}(\cdot))&\leq& \int_{t}^{T}\bar{g}(s)ds +h(\bar{X}(T))\\
 &\leq& \liminf_{k\rightarrow \infty}[\int_{t}^{T}\tilde{g}_k(s)ds+h(X_k(T))]\\
 &=&\lim_{k\rightarrow \infty} \frac{1}{k}J^T(t,x;u_i(\cdot))\\
-\lim_{k\rightarrow \infty} J^T(t,x;u_k(\cdot))\\
-&=& \inf_{u(\cdot)\in\tilde{\mathcal{U}}^M_x[t,T]}J^T(t,x;u(\cdot)).
+\lim_{k\rightarrow \infty} J^T(t,x;u_k(\cdot)) &=& \inf_{u(\cdot)\in\tilde{\mathcal{U}}^M_x[t,T]}J^T(t,x;u(\cdot)).
 \end{eqnarray*}
 
 This means that $(\bar{u}(\cdot),\bar{X}(\cdot))$ is an optimal pair.

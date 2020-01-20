@@ -1,6 +1,6 @@
 \section{Control Systems}
 
-In this section, we presente the assumptions for the prove of existence of a optimal pair.
+In this section, we present the assumptions for the proof of existence of an optimal pair.
 
 We assume that $U$ is a non-empty closed subset in $\mathbb{R}^n$ (it could be generally a separable complete metric space). For any initial pair $(t,x)\in \mathbb{R}_{+}\times\mathbb{R}^n$, we rewrite the control system here:
 
@@ -12,9 +12,9 @@ We assume that $U$ is a non-empty closed subset in $\mathbb{R}^n$ (it could be g
 	\right.
 \end{equation}
 
-Let us begin with the following assuption:
+Let us begin with the following assumption:
 
-(C1) The map $f:\mathbb{R}_{+}\times U\times \mathbb{R}^n\rightarrow \mathbb{R}^n$ is measurable and there exists a constan $L>0$ such that
+(C1) The map $f:\mathbb{R}_{+}\times U\times \mathbb{R}^n\rightarrow \mathbb{R}^n$ is measurable and there exists a constant $L>0$ such that
 
 $$\left\{ \begin{array}{l}
 	|f(t,u,x_1)-f(t,u,x_2)|\leq L|x_1-x_2|,\, (t,u)\in \mathbb{R}_{+}\times U,\, x_1,x_2\in \mathbb{R}^n,\\
@@ -22,14 +22,14 @@ $$\left\{ \begin{array}{l}
 \end{array}
 \right.$$
 
-Note that this conditions imply
+Note that this conditions imply:
 
 $$|f(t,u,x)|\leq L(1+|x|),\,(t,u,x)\in\mathbb{R}_{+}\times U\times \mathbb{R}^n.$$
 
 This condition is also usually called the lipschitz condition of the function $f$. A key feature of the above is that the bond of $|f(t,u,x)|$, depending on $|x|$, is uniform in $u$.
 
 \begin{prop}\label{prop2.1.1}
-	Let (C1) hold. Then, for any $(t,x)\in\mathbb{R}_{+}\times\mathbb{R}^n$, and $u(\cdot)\in \mathcal{U}[t,\infty)$, there exits a unique solution $X(\cdot)\equiv X(\cdot;t,x,u(\cdot))$ to the state equation (\ref{eq2.1}). Moreover, the following estimate hold:
+	Let (C1) hold. Then, for any $(t,x)\in\mathbb{R}_{+}\times\mathbb{R}^n$, and $u(\cdot)\in \mathcal{U}[t,\infty)$, there exists a unique solution $X(\cdot)\equiv X(\cdot;t,x,u(\cdot))$ to the state equation (\ref{eq2.1}). Moreover, the following estimates hold:
 	
 	\begin{equation}\label{eq2.2}
 	\left\{ \begin{array}{l}
@@ -46,7 +46,7 @@ This condition is also usually called the lipschitz condition of the function $f
 \end{prop}
 
 \begin{proof}
-It suffies to prove our conclusion on any interval $[t,T]$ with $0\leq t<T<\infty$, Since $[t,\infty)=\bigcup_{T\geq t}[t,T]$.
+It suffices to prove our conclusion on any interval $[t,T]$ with $0\leq t<T<\infty$, Since $[t,\infty)=\bigcup_{T\geq t}[t,T]$.
 
 For any $X(\cdot)\in C([t,T];\mathbb{R}^n)$, we define
 
@@ -64,7 +64,7 @@ Define $\delta=|t-s|$, then
 
 $$||[\mathcal{S}X_1(\cdot)]-[\mathcal{S}X_2(\cdot)]||_{C([t,T];\mathbb{R}^n)}\leq \delta L||X_1(\cdot)-X_2(\cdot)||_{C([t,T];\mathbb{R}^n)}.$$
 
-Therefore, by chosing $\delta<\frac{1}{L}$, we see that $\mathcal{S}: C([t,T];\mathbb{R}^n)\rightarrow C([t,T];\mathbb{R}^n)$ is contractive. Hence, by Contraction Mapping Theorem (\ref{BFT}), the control system (\ref{eq2.1}) admits a unique solution on $[t,t+\delta]$. Repeating the argument, we can obtain that (\ref{eq2.1}) admits a unique solution on $[t,T]$.
+Therefore, by choosing $\delta<\frac{1}{L}$, we see that $\mathcal{S}: C([t,T];\mathbb{R}^n)\rightarrow C([t,T];\mathbb{R}^n)$ is contractive. Hence, by Contraction Mapping Theorem (\ref{BFT}), the control system (\ref{eq2.1}) admits a unique solution on $[t,t+\delta]$. Repeating the argument, we can obtain that (\ref{eq2.1}) admits a unique solution on $[t,T]$.
 
 Next, for the unique solution $X(\cdot)$ of (\ref{eq2.1}), we have
 
@@ -85,11 +85,11 @@ thus, $|X(s)|\leq e^{L(s-t)}(1+|x|)-1.$ This gives the first estimate in (\ref{e
 &=& (1+|x|)[e^{L(s-t)}-1].
 \end{eqnarray*}
 
-This prove the second estimate in (\ref{eq2.2}). finally, for $x_1,x_2\in \mathbb{R}^n$, let us denote $X_i(\cdot)=X(\cdot;t,x_i,u(\cdot))$. Then
+This proves the second estimate in (\ref{eq2.2}). Finally, for $x_1,x_2\in \mathbb{R}^n$, let us denote $X_i(\cdot)=X(\cdot;t,x_i,u(\cdot))$. Then
 
 $$|X_1(s)-X_2(s)|\leq L\int_{t}^{s} |X_1(r)-X_2(r)|dr.$$
 
 By Gronwall's Inequality (\ref{GIP}), we obtain (\ref{eq2.3}).
 \end{proof}
 
-We can see that estimates (\ref{eq2.2}) are uniform in $u(\cdot)\in \mathcal{U}[t,T]$. This will paly an interesting role later.
+We can see that estimates (\ref{eq2.2}) are uniform in $u(\cdot)\in \mathcal{U}[t,T]$. This will play an interesting role later.
